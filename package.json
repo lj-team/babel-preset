@@ -1,0 +1,25 @@
+{
+  "name": "babel-preset-lj-team",
+  "description": "Babel preset for lj-team projects.",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": {
+    "name": "lj-team"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:lj-team/babel-preset.git"
+  },
+  "peerDependencies": {
+    "babel-core": ">=6.24.0"
+  },
+  "dependencies": {
+    "babel-plugin-module-resolver": "2.7.0",
+    "babel-plugin-transform-exponentiation-operator": "6.22.0",
+    "babel-plugin-transform-object-rest-spread": "6.23.0",
+    "babel-preset-es2015": "6.24.0",
+    "babel-preset-es2016": "6.22.0",
+    "babel-preset-es2017": "6.22.0",
+    "babel-preset-react": "6.23.0"
+  }
+}
