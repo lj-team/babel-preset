@@ -10,10 +10,11 @@ const transformExponentiationOperator = require('babel-plugin-transform-exponent
 
 module.exports = function (context, opts) {
   var modules
-  var alias
-
   if (opts && opts.modules) modules = opts.modules
-  if (opts && opts.alias) alias = opts.alias
+
+  const alias = {
+    common: './common'
+  }
 
   return {
     presets: [
@@ -24,7 +25,7 @@ module.exports = function (context, opts) {
       react
     ].filter(Boolean),
     plugins: [
-      alias && [moduleResolver, { alias: alias }],
+      [moduleResolver, { alias: alias }],
       transformObjectRestSpread,
       transformExponentiationOperator
     ].filter(Boolean)

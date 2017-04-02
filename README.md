@@ -6,9 +6,7 @@ npm install -SE babel-core lj-team/babel-preset
 
 ```json
 {
-  "preset": [
-    "lj-team"
-  ]
+  "preset": "lj-team"
 }
 
 // or
@@ -18,10 +16,7 @@ npm install -SE babel-core lj-team/babel-preset
     [
       "lj-team",
       {
-        "modules": false,
-        "alias": {
-          "common": "./common"
-        }
+        "modules": false
       }
     ]
   ]
