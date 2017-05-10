@@ -9,8 +9,7 @@ const transformObjectRestSpread = require('babel-plugin-transform-object-rest-sp
 const transformExponentiationOperator = require('babel-plugin-transform-exponentiation-operator')
 
 module.exports = function (context, opts) {
-  var modules
-  if (opts && opts.modules) modules = opts.modules
+  var nomodules = opts && !opts.modules === false
 
   const alias = {
     common: './common'
@@ -18,8 +17,8 @@ module.exports = function (context, opts) {
 
   return {
     presets: [
-      modules && [es2015, { modules: modules }],
-      !modules && es2015,
+      nomodules && [es2015.buildPreset, { modules: false }],
+      !nomodules && es2015,
       es2016,
       es2017,
       react
