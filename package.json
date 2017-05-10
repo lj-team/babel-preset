@@ -1,7 +1,7 @@
 {
   "name": "babel-preset-lj-team",
   "description": "Babel preset for lj-team projects.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "index.js",
   "author": {
     "name": "lj-team"

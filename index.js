@@ -9,7 +9,7 @@ const transformObjectRestSpread = require('babel-plugin-transform-object-rest-sp
 const transformExponentiationOperator = require('babel-plugin-transform-exponentiation-operator')
 
 module.exports = function (context, opts) {
-  var nomodules = opts && !opts.modules === false
+  var nomodules = opts && opts.modules === false
 
   const alias = {
     common: './common'
